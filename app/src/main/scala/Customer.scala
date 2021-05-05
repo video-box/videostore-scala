@@ -28,7 +28,7 @@ class Customer(val name: String) {
       }
       frequentRenterPoints += 1
       if ((rental.movie.getPriceCode eq Movie.NEW_RELEASE) && rental.daysRented > 1) frequentRenterPoints += 1
-      result += "\t" + rental.getMovie.getTitle + "\t" + String.valueOf(thisAmount) + "\n"
+      result = result + "\t" + rental.getMovie.getTitle + "\t" + String.valueOf(thisAmount) + "\n"
       totalAmount += thisAmount
     }
 
